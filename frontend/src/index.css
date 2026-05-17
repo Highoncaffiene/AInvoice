@@ -1,7 +1,151 @@
 
 @import "tailwindcss";
 
+/* ================================================================
+   LOCOMOTIVE SCROLL V5 CSS CONFIGURATION
+   Locomotive Scroll v5 uses Lenis for smooth scrolling
+   These minimal styles support the scroll functionality
+   ================================================================ */
+
+/* 
+  Base styles for Locomotive Scroll v5
+  V5 uses window scrolling by default, not custom containers
+*/
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* 
+  Data scroll container - used for wrapping the app
+  Locomotive Scroll v5 doesn't require special container styling
+  for full-page scrolling (uses window by default)
+*/
+[data-scroll-container] {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 
+  Ensure elements can be scrolled to smoothly
+  Locomotive Scroll v5 handles this with Lenis
+*/
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scrolling, not CSS */
+}
+
+/* 
+  Fix for overflow utilities that might conflict with Locomotive Scroll
+  Ensure only Locomotive Scroll handles scrolling
+*/
+[data-scroll-container] *:not([data-scroll-container]) {
+  overflow: visible !important;
+}
+
+/* ================================================================
+   RESPONSIVE STYLES FOR LOCOMOTIVE SCROLL V5
+   ================================================================ */
+
+/* 
+  Mobile and tablet smooth scroll config
+  Locomotive Scroll handles these via JS options
+  This CSS ensures proper rendering on all devices
+*/
+@media (max-width: 1024px) {
+  [data-scroll-container] {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensure scroll works on iPad and tablets */
+  [data-scroll-container] {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile-specific fixes */
+  [data-scroll-container] {
+    height: 100vh;
+    overflow: hidden !important;
+  }
+}
+
+/* ================================================================
+   ACCESSIBILITY & INTERACTION FIXES
+   Ensure links, buttons, and forms work properly with scroll
+   ================================================================ */
+
+/* 
+  Fix for anchor links and smooth scrolling within page
+  Works in conjunction with Locomotive Scroll
+*/
+a[href^="#"] {
+  cursor: pointer;
+}
+
+/* 
+  Ensure focus states are visible for accessibility
+  Important for keyboard navigation
+*/
+[data-scroll-container] *:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* 
+  Fix potential z-index issues with fixed/sticky elements
+  Navbar and other fixed elements should appear above scroll content
+*/
+[data-scroll-container] {
+  position: relative;
+  z-index: 0;
+}
+
+nav,
+header,
+.navbar,
+.fixed {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* ================================================================
+   ANIMATION & TRANSITION FIXES
+   Ensure smooth animations work with Locomotive Scroll
+   ================================================================ */
+
+/* 
+  Use GPU acceleration for smooth scroll
+  transform is preferred over position changes with Locomotive Scroll
+*/
+[data-scroll-container] * {
+  /* Enabling GPU acceleration for smooth animations */
+  /* Only if needed - can impact performance */
+}
+
+/* 
+  Prevent text selection issues during scroll
+  Important for better UX during fast scrolls
+*/
+[data-scroll-container] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 /* Add to your global CSS file */
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   .print-preview-container {

@@ -22,7 +22,12 @@ const ClerkProtected = ({ children }) => (
 
 const App = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden">
+    <div className="w-full">
+      {/* 
+        Note: overflow-x-hidden and min-h-screen removed
+        Locomotive Scroll handles the scrolling and viewport height
+        The scroll container manages height calculations
+      */}
       <Routes>
         {/* Public */}
         <Route path="/" element={<Home />} />
