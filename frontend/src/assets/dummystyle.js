@@ -71,7 +71,7 @@ export const businessProfileStyles = {
   actionInnerContainer: "flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4",
   actionButtonGroup: "flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto",
   saveButton:  "inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-lg bg-gradient-to-r from-accent to-accent text-white font-semibold text-xs sm:text-sm hover:from-accent hover:to-accent transform hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
-  resetButton:  "inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium text-xs sm:text-sm active:scale-95",
+  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium",
   
   // Animation
   hoverScale: "group-hover:scale-105 transition-transform duration-300"
@@ -107,7 +107,7 @@ export const aiReminderModalStyles = {
   previewPlaceholder: "text-gray-500",
   previewPlaceholderHighlight: "font-medium",
   actions: "mt-4 flex items-center justify-end gap-3",
-  resetButton: "px-3 py-2 rounded-md border text-sm",
+  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium",
   copyButton: "px-3 py-2 rounded-md border text-sm",
   copyButtonEnabled: "bg-white hover:bg-gray-50",
   copyButtonDisabled: "opacity-50 cursor-not-allowed",
@@ -166,7 +166,7 @@ cardSubtitle: "text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4",
   inputSmall: "w-full rounded-lg border text-gray-500 border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-accent focus:border-accent transition-all duration-200 text-sm",
   
   // Buttons
-  previewButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm",
+  previewButton: "flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-lg bg-transparent border border-[#E5E7EB] text-[#374151] font-medium hover:bg-gray-50 active:bg-gray-100 transition-all duration-200 group/btn text-xs sm:text-sm",
   saveButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-accent to-accent text-white font-semibold hover:from-accent hover:to-accent transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
   saveProfileButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 text-accent hover:bg-gray-100 transition-all duration-200 text-sm font-medium",
   addItemButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-dashed border-gray-300 text-gray-500 hover:border-gray-400 hover:text-gray-700 transition-all duration-200 font-medium w-full justify-center group",
@@ -467,7 +467,7 @@ export const invoicesStyles = {
   headerTitle: "text-3xl lg:text-4xl  text-gray-900 tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-500 max-w-3xl",
   headerActions: "flex items-center gap-3",
-  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm group",
+  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium shadow-sm group",
   createButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-accent to-accent text-white font-semibold hover:from-accent hover:to-accent transform hover:scale-105 transition-all duration-200 shadow-lg",
   
   // Stats Overview
@@ -506,7 +506,7 @@ export const invoicesStyles = {
   perPageContainer: "flex items-center gap-3",
   perPageLabel: "text-sm font-medium text-gray-700",
   perPageSelect: "rounded-lg border border-gray-300 px-4 py-2 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-accent focus:border-accent transition-all duration-200",
-  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium",
+  resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium",
   
   // Table Section
   tableCard: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm overflow-hidden card-lift",
@@ -566,7 +566,7 @@ export const invoicesStyles = {
   pagination: "flex items-center justify-between mt-8 pt-6 border-t border-gray-200/60",
   paginationText: "text-sm text-gray-500",
   paginationControls: "flex items-center gap-2",
-  paginationButton: "flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200",
+  paginationButton: "flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200",
   paginationNumbers: "flex items-center gap-1",
   paginationNumber: "w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200",
   paginationNumberActive: "bg-gradient-to-r from-accent to-accent text-white shadow-lg",
@@ -661,7 +661,7 @@ export const heroStyles = {
   primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
   primaryButtonText: "relative text-xs sm:text-sm",
   primaryButtonIcon: "w-4 sm:w-5 h-4 sm:h-5 relative group-hover:translate-x-1 transition-transform duration-300",
-  secondaryButton: "group inline-flex items-center justify-center gap-2 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-lg sm:rounded-lg bg-white/80 backdrop-blur-xl border border-gray-200/60 text-gray-700 font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 hover:border-gray-300/60 w-full xs:w-auto",
+  secondaryButton: "group inline-flex items-center justify-center gap-2 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-lg sm:rounded-lg bg-transparent border border-[#E5E7EB] text-[#374151] font-semibold text-sm sm:text-base shadow-sm hover:shadow-md transform hover:scale-105 active:scale-95 transition-all duration-300 w-full xs:w-auto",
   secondaryButtonIcon: "w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-y-0.5 transition-transform duration-300",
   
   // Feature Highlights - Responsive grid
@@ -718,8 +718,7 @@ export const heroStyles = {
 
   // Action Buttons - Responsive layout
   actionButtons: "flex flex-col xs:flex-row gap-2 sm:gap-3 pt-4 sm:pt-5 lg:pt-6",
-  previewButton:
-    "flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-lg border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 hover:border-gray-400 active:bg-gray-100 transition-all duration-200 group/btn text-xs sm:text-sm",
+  previewButton: "flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-lg bg-transparent border border-[#E5E7EB] text-[#374151] font-medium hover:bg-gray-50 active:bg-gray-100 transition-all duration-200 group/btn text-xs sm:text-sm",
   previewButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
   sendButton:
@@ -756,7 +755,7 @@ export const heroStyles = {
 
 export const invoicePreviewStyles = {
   // Layout
-  pageContainer: "min-h-screen p-6 bg-gradient-to-br from-gray-50 via-gray-100/30 to-gray-100/20",
+  pageContainer: "min-h-screen p-6 bg-white",
   container: "max-w-6xl  mx-auto",
   noPrint: "no-print",
 
@@ -766,8 +765,8 @@ export const invoicePreviewStyles = {
   headerSubtitle: "mt-2 text-lg text-gray-500",
   headerInvoiceNumber: "font-semibold text-accent",
   headerActions: "flex flex-wrap items-center gap-3",
-  sendReminderButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium",
-  editInvoiceButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium",
+  sendReminderButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium",
+  editInvoiceButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#E5E7EB] bg-transparent text-[#374151] hover:bg-gray-50 transition-all duration-200 font-medium",
   printButton: "inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-accent to-accent text-white font-semibold hover:from-accent hover:to-accent transform hover:scale-105 transition-all duration-200 shadow-lg",
 
   // Invoice Preview Card
@@ -943,7 +942,7 @@ export const pricingCardStyles = {
   // CTA Button - Responsive
   ctaButton: "w-full py-2.5 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-lg sm:rounded-lg lg:rounded-lg font-semibold text-xs sm:text-sm lg:text-base transition-all cursor-pointer duration-300 group/btn touch-manipulation active:scale-95",
   ctaButtonPopular: "bg-gradient-to-r from-accent to-accent text-white shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl hover:from-accent hover:to-accent transform",
-  ctaButtonRegular: "bg-white border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50",
+  ctaButtonRegular: "bg-transparent border border-[#E5E7EB] text-[#374151] hover:bg-gray-50",
   ctaButtonText: "inline-block transition-transform duration-300",
   ctaButtonTextPopular: "group-hover/btn:translate-x-1",
   ctaButtonTextRegular: "group-hover/btn:translate-y-0.5",

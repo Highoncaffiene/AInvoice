@@ -682,3 +682,12 @@ header,
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
 }
+
+/* Dark context adaptive override for secondary buttons */
+[class*="bg-[#09"] .border-\[\#E5E7EB\],
+[class*="bg-[#1"] .border-\[\#E5E7EB\],
+[class*="bg-black"] .border-\[\#E5E7EB\],
+.dark .border-\[\#E5E7EB\] {
+  border-color: #27272A !important;
+  color: #D4D4D8 !important;
+}
