@@ -82,6 +82,8 @@ const invoiceSchema = new mongoose.Schema({
     timestamps: true
 });
 
+invoiceSchema.index({ owner: 1, createdAt: -1 });
+invoiceSchema.index({ owner: 1, status: 1 });
 
 const Invoice = mongoose.model('Invoice', invoiceSchema);
 

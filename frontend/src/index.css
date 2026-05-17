@@ -52,52 +52,123 @@ html {
 }
 
 /* ================================================================
-   RESPONSIVE STYLES FOR LOCOMOTIVE SCROLL V5
+   RESPONSIVE UTILITIES & TOUCH-FRIENDLY INTERACTIONS
+   Mobile-first approach with proper breakpoints
    ================================================================ */
 
 /* 
-  Mobile and tablet smooth scroll config
-  Locomotive Scroll handles these via JS options
-  This CSS ensures proper rendering on all devices
+  Add custom breakpoint for extra small screens (xs)
+  This bridges the gap between default (no breakpoint) and sm
 */
-@media (max-width: 1024px) {
-  [data-scroll-container] {
-    height: 100vh;
+@layer utilities {
+  /* Extra small screens (320px - 639px) - default, no prefix needed */
+  @media (max-width: 639px) {
+    .xs\:hidden {
+      display: none;
+    }
+    .xs\:block {
+      display: block;
+    }
+    .xs\:flex {
+      display: flex;
+    }
+    .xs\:gap-2 {
+      gap: 0.5rem;
+    }
+    .xs\:gap-3 {
+      gap: 0.75rem;
+    }
+    .xs\:gap-4 {
+      gap: 1rem;
+    }
+    .xs\:p-3 {
+      padding: 0.75rem;
+    }
+    .xs\:px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    .xs\:py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .xs\:text-right {
+      text-align: right;
+    }
+    .xs\:w-auto {
+      width: auto;
+    }
+    .xs\:flex-row {
+      flex-direction: row;
+    }
+    .xs\:items-start {
+      align-items: flex-start;
+    }
+    .xs\:items-center {
+      align-items: center;
+    }
+  }
+
+  /* Touch-friendly minimum tap target size (44px for fingers, 48px recommended) */
+  button, a[href], [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
+    @apply min-h-10 min-w-10 sm:min-h-11 sm:min-w-11;
+  }
+
+  /* Ensure proper spacing between touch targets */
+  button + button, button + a {
+    @apply sm:ml-2;
   }
 }
 
-@media (max-width: 768px) {
-  /* Ensure scroll works on iPad and tablets */
-  [data-scroll-container] {
-    -webkit-overflow-scrolling: touch;
+/* 
+  Ensure form inputs are touch-friendly on mobile
+  Prevent zoom on input focus (iOS issue)
+*/
+input, textarea, select {
+  font-size: 16px; /* Prevents zoom on iOS */
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  input, textarea, select {
+    border-radius: 0.75rem;
   }
 }
 
-@media (max-width: 480px) {
-  /* Mobile-specific fixes */
-  [data-scroll-container] {
-    height: 100vh;
-    overflow: hidden !important;
+/* 
+  Responsive image sizing
+  Ensure images scale properly on all devices
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 
+  Responsive video embedding
+  Proper aspect ratio on all devices
+*/
+iframe, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+  Container query-like responsive behavior for modals
+  Ensure modals work on small screens
+*/
+@media (max-width: 640px) {
+  [role="dialog"] {
+    margin: 1rem !important;
+    max-height: calc(100vh - 2rem) !important;
+    border-radius: 0.75rem !important;
   }
 }
 
 /* ================================================================
-   ACCESSIBILITY & INTERACTION FIXES
-   Ensure links, buttons, and forms work properly with scroll
+   RESPONSIVE SCROLL BEHAVIOR
    ================================================================ */
-
-/* 
-  Fix for anchor links and smooth scrolling within page
-  Works in conjunction with Locomotive Scroll
-*/
-a[href^="#"] {
-  cursor: pointer;
-}
-
-/* 
-  Ensure focus states are visible for accessibility
-  Important for keyboard navigation
-*/
 [data-scroll-container] *:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;

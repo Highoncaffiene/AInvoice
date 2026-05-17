@@ -2,6 +2,7 @@ import path from "path";
 import BusinessProfile from "../models/bussinessProfileModel.js";
 
 import { getAuth } from "@clerk/express";
+import { businessProfileValidationSchema, validateData } from "../utils/validationSchemas.js";
 
 const API_BASE = process.env.API_BASE || "http://localhost:4000";
 
@@ -32,6 +33,10 @@ export async function createBusinessProfile(req, res) {
         if (!userId) return res.status(401).json({ success: false, message: "Auth required" });
 
         const body = req.body || {};
+        const validation = validateData(businessProfileValidationSchema, body);
+        if (!validation.success) {
+            return res.status(400).json({ success: false, message: "Validation error", errors: validation.errors });
+        }
         const fileUrls = uploadedFilesToUrls(req);
 
         const data = {
@@ -68,6 +73,10 @@ export async function updateBusinessProfile(req, res) {
 
         const { id } = req.params;
         const body = req.body || {};
+        const validation = validateData(businessProfileValidationSchema, body);
+        if (!validation.success) {
+            return res.status(400).json({ success: false, message: "Validation error", errors: validation.errors });
+        }
         const fileUrls = uploadedFilesToUrls(req);
 
         const update = {

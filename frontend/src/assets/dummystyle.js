@@ -16,62 +16,62 @@ export const aiInvoiceModalStyles = {
 
 // src/assets/dummyStyles.js
 export const businessProfileStyles = {
-  // Layout
-  pageContainer: "space-y-8 font-[pacifico]",
+  // Layout - Mobile first responsive
+  pageContainer: "space-y-6 sm:space-y-8 font-[pacifico] px-4 sm:px-6 lg:px-8",
   
-  // Header
+  // Header - Responsive typography
   headerContainer: "text-center lg:text-left",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
-  headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
+  headerTitle: "text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerSubtitle: "mt-2 text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl",
   
-  // Cards/Sections
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-200/60 shadow-sm",
-  cardHeaderContainer: "flex items-center gap-3 mb-6",
-  cardIconContainer: "p-2 rounded-lg",
-  cardTitle: "text-xl whitespace-nowrap font-semibold text-gray-900",
+  // Cards/Sections - Responsive padding
+  cardContainer: "bg-white/80 backdrop-blur-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200/60 shadow-sm",
+  cardHeaderContainer: "flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6",
+  cardIconContainer: "p-2 rounded-lg w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center",
+  cardTitle: "text-lg sm:text-xl font-semibold text-gray-900",
   
-  // Grid
-  gridCols1: "grid grid-cols-1 gap-6",
-  gridCols2: "grid grid-cols-1 md:grid-cols-2 gap-6",
-  gridCols2Lg: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8",
-  gridColSpan2: "md:col-span-2",
+  // Grid - Mobile first responsive
+  gridCols1: "grid grid-cols-1 gap-4 sm:gap-6",
+  gridCols2: "grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8",
+  gridCols2Lg: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8",
+  gridColSpan2: "sm:col-span-2",
   
-  // Form Elements
-  label: "block text-sm font-medium text-gray-700 mb-2",
-  input: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
-  textarea: "w-full rounded-xl border border-gray-300 px-4 py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200",
+  // Form Elements - Touch-friendly sizing
+  label: "block text-xs sm:text-sm font-medium text-gray-700 mb-2",
+  input: "w-full rounded-lg sm:rounded-xl border border-gray-300 px-3 sm:px-4 py-2.5 sm:py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm sm:text-base",
+  textarea: "w-full rounded-lg sm:rounded-xl border border-gray-300 px-3 sm:px-4 py-2.5 sm:py-3 bg-white/50 backdrop-blur-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-sm sm:text-base",
   
-  // Upload Areas
-  uploadArea: "border-4 border-dashed border-gray-300 rounded-2xl p-6 transition-all duration-300 hover:border-gray-400 group",
-  uploadIconContainer: "w-16 h-16 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400",
-  uploadSmallIconContainer: "w-12 h-12 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400",
-  uploadTextTitle: "text-sm font-medium text-gray-900",
+  // Upload Areas - Responsive
+  uploadArea: "border-2 sm:border-4 border-dashed border-gray-300 rounded-lg sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-gray-400 group",
+  uploadIconContainer: "w-12 h-12 sm:w-16 sm:h-16 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400 text-base sm:text-xl",
+  uploadSmallIconContainer: "w-10 h-10 sm:w-12 sm:h-12 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400 text-sm sm:text-base",
+  uploadTextTitle: "text-xs sm:text-sm font-medium text-gray-900 mt-2 sm:mt-3",
   uploadTextSubtitle: "text-xs text-gray-500 mt-1",
   
-  // Image Previews
-  imagePreviewContainer: "text-center space-y-4",
-  logoPreview: "w-40 h-32 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white",
-  stampPreview: "w-32 h-24 mx-auto  rounded-xl overflow-hidden flex items-center justify-center bg-white",
-  signaturePreview: "w-32 h-20 mx-auto rounded-xl overflow-hidden flex items-center justify-center bg-white",
+  // Image Previews - Responsive sizing
+  imagePreviewContainer: "text-center space-y-3 sm:space-y-4",
+  logoPreview: "w-32 sm:w-40 h-24 sm:h-32 mx-auto rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center bg-white",
+  stampPreview: "w-24 sm:w-32 h-20 sm:h-24 mx-auto rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center bg-white",
+  signaturePreview: "w-24 sm:w-32 h-16 sm:h-20 mx-auto rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center bg-white",
   
-  // Buttons
-  buttonGroup: "flex flex-wrap gap-2 justify-center sm:gap-3 md:gap-4",
-  changeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all duration-200 cursor-pointer font-medium text-sm sm:text-base",
+  // Buttons - Touch-friendly sizing
+  buttonGroup: "flex flex-wrap gap-2 justify-center sm:gap-3",
+  changeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg sm:rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all duration-200 cursor-pointer font-medium text-xs sm:text-sm active:scale-95",
 
-  removeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 rounded-xl bg-rose-50 text-rose-700 hover:bg-rose-100 transition-all duration-200 font-medium text-sm sm:text-base",
+  removeButton: "inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg sm:rounded-xl bg-rose-50 text-rose-700 hover:bg-rose-100 transition-all duration-200 font-medium text-xs sm:text-sm active:scale-95",
 
   
-  // Tax Section
-  taxContainer: "bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100",
-  taxInput: "w-32 rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium text-center",
-  taxHelpText: "text-xs text-gray-500 mt-3",
+  // Tax Section - Responsive
+  taxContainer: "bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg sm:rounded-2xl p-4 sm:p-6 border border-blue-100",
+  taxInput: "w-24 sm:w-32 rounded-lg sm:rounded-xl border border-gray-300 px-3 sm:px-4 py-2 sm:py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-medium text-center text-sm sm:text-base",
+  taxHelpText: "text-xs text-gray-500 mt-2 sm:mt-3",
   
-  // Action Buttons
-  actionContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm",
-  actionInnerContainer: "flex flex-col sm:flex-row items-center justify-between gap-4",
-  actionButtonGroup: "flex flex-wrap items-center gap-2 sm:gap-3 justify-center sm:justify-start",
-  saveButton:  "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm sm:text-base hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
-  resetButton:  "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium text-sm sm:text-base",
+  // Action Buttons - Responsive layout
+  actionContainer: "bg-white/80 backdrop-blur-xl rounded-lg sm:rounded-2xl p-4 sm:p-6 border border-gray-200/60 shadow-sm",
+  actionInnerContainer: "flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4",
+  actionButtonGroup: "flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto",
+  saveButton:  "inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xs sm:text-sm hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
+  resetButton:  "inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium text-xs sm:text-sm active:scale-95",
   
   // Animation
   hoverScale: "group-hover:scale-105 transition-transform duration-300"
@@ -276,58 +276,58 @@ export const createInvoiceCustomStyles = {
 
 // src/assets/dummyStyles.js (add these to the existing export)
 export const appShellStyles = {
-  // Layout
+  // Layout - Responsive
   root: "min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-indigo-50/20",
   layout: "lg:flex",
   
-  // Desktop Sidebar
+  // Desktop Sidebar - Hidden on mobile/tablet
   sidebar: "hidden lg:block bg-white/80 backdrop-blur-xl border-r border-gray-200/60 transition-all duration-500 ease-in-out relative",
   sidebarCollapsed: "w-20",
-  sidebarExpanded: "w-80",
+  sidebarExpanded: "w-64 xl:w-80",
   sidebarGradient: "absolute inset-0 bg-gradient-to-b from-blue-50/5 to-transparent pointer-events-none",
-  sidebarContainer: "px-6 py-8 h-full flex flex-col justify-between relative z-10",
+  sidebarContainer: "px-4 lg:px-6 py-6 lg:py-8 h-full flex flex-col justify-between relative z-10",
   
-  // Logo Area
-  logoContainer: "mb-12 flex items-center",
+  // Logo Area - Responsive sizing
+  logoContainer: "mb-8 lg:mb-12 flex items-center",
   logoContainerCollapsed: "justify-center",
-  logoLink: "inline-flex items-center group transition-all duration-300",
-  logoImage: "h-16 w-16 object-contain drop-shadow-sm",
+  logoLink: "inline-flex items-center group transition-all duration-300 gap-2 lg:gap-3",
+  logoImage: "h-12 lg:h-14 w-12 lg:w-14 object-contain drop-shadow-sm",
   logoTextContainer: "",
-  logoText: "font-bold text-3xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  logoText: "font-bold text-xl lg:text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
   logoUnderline: "h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-500 mt-1",
-  collapseButton: "p-2 ml-7 rounded-lg border border-gray-200 bg-white/50 hover:bg-white hover:shadow-md transition-all duration-300 group",
+  collapseButton: "p-2 ml-4 lg:ml-6 rounded-lg border border-gray-200 bg-white/50 hover:bg-white hover:shadow-md transition-all duration-300 group",
   
-  // Navigation
-  nav: "space-y-2",
-  sidebarLink: "group flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all duration-300 ease-out",
+  // Navigation - Responsive sizing and spacing
+  nav: "space-y-1 lg:space-y-2",
+  sidebarLink: "group flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2.5 lg:py-3 rounded-lg lg:rounded-xl text-xs lg:text-sm font-medium transition-all duration-300 ease-out touch-manipulation active:scale-95",
   sidebarLinkCollapsed: "justify-center",
   sidebarLinkActive: "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 shadow-sm border border-blue-100",
   sidebarLinkInactive: "text-gray-600 hover:text-gray-900 hover:bg-white hover:shadow-md",
-  sidebarIcon: "transition-all duration-300",
+  sidebarIcon: "w-5 h-5 lg:w-6 lg:h-6 transition-all duration-300 flex-shrink-0",
   sidebarIconActive: "text-blue-600 scale-110",
   sidebarIconInactive: "text-gray-400 group-hover:text-gray-600 group-hover:scale-105",
-  sidebarText: "flex-1 transition-all duration-300",
+  sidebarText: "flex-1 transition-all duration-300 hidden lg:block",
   sidebarActiveIndicator: "w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse",
   
-  // User Area
+  // User Area - Responsive
   userSection: "mt-auto",
-  userDivider: "border-t border-gray-200/60 pt-6",
+  userDivider: "border-t border-gray-200/60 pt-4 lg:pt-6",
   userDividerCollapsed: "px-1",
   userDividerExpanded: "px-2",
-  logoutButton: "w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50 hover:shadow-sm transition-all duration-300 group",
-  logoutIcon: "w-5 h-5 group-hover:scale-110 transition-transform",
-  collapseSection: "mt-4 flex justify-center",
-  collapseButtonInner: "flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-white transition-all duration-300 text-xs text-gray-600 hover:text-gray-800",
+  logoutButton: "w-full flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2.5 lg:py-3 rounded-lg lg:rounded-xl text-xs lg:text-sm font-medium text-red-600 hover:bg-red-50 hover:shadow-sm transition-all duration-300 group active:scale-95",
+  logoutIcon: "w-4 h-4 lg:w-5 lg:h-5 flex-shrink-0 group-hover:scale-110 transition-transform",
+  collapseSection: "mt-3 lg:mt-4 flex justify-center",
+  collapseButtonInner: "flex items-center gap-2 px-2 lg:px-3 py-1.5 lg:py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-white transition-all duration-300 text-xs text-gray-600 hover:text-gray-800",
   collapseButtonCollapsed: "justify-center w-10",
   
-  // Mobile Sidebar
+  // Mobile Sidebar - Responsive for tablets and phones
   mobileOverlay: "lg:hidden fixed inset-0 z-50",
   mobileBackdrop: "absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300",
-  mobileSidebar: "absolute inset-y-0 left-0 w-80 bg-white/90 backdrop-blur-xl border-r border-gray-200/60 p-6 overflow-auto transform transition-transform duration-300",
-  mobileHeader: "mb-8 flex items-center justify-between",
-  mobileLogoLink: "inline-flex items-center",
-  mobileLogoImage: "h-10 w-10 object-contain",
-  mobileLogoText: "font-bold text-xl ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  mobileSidebar: "absolute inset-y-0 left-0 w-72 sm:w-80 bg-white/95 backdrop-blur-xl border-r border-gray-200/60 p-4 sm:p-6 overflow-y-auto transform transition-transform duration-300 max-h-screen pt-20",
+  mobileHeader: "mb-6 sm:mb-8 flex items-center justify-between",
+  mobileLogoLink: "inline-flex items-center gap-2",
+  mobileLogoImage: "h-9 sm:h-10 w-9 sm:w-10 object-contain",
+  mobileLogoText: "font-bold text-base sm:text-lg bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
   mobileCloseButton: "p-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-white transition-all duration-300",
   mobileCloseIcon: "w-5 h-5 text-gray-600",
   mobileNav: "space-y-2",
@@ -576,178 +576,178 @@ export const invoicesStyles = {
 // Add to src/assets/dummyStyles.js (after the existing styles)
 
 export const featuresStyles = {
-  // Section
-  section: "relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden",
+  // Section - Responsive padding
+  section: "relative py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden",
   
-  // Background Elements
-  backgroundBlob1: "absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob",
-  backgroundBlob2: "absolute top-0 right-0 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000",
-  backgroundBlob3: "absolute -bottom-8 left-20 w-72 h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000",
+  // Background Elements - Responsive sizing
+  backgroundBlob1: "absolute top-0 left-0 w-40 sm:w-72 h-40 sm:h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob",
+  backgroundBlob2: "absolute top-0 right-0 w-40 sm:w-72 h-40 sm:h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000",
+  backgroundBlob3: "absolute -bottom-8 left-20 w-40 sm:w-72 h-40 sm:h-72 bg-amber-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000",
   
-  // Container
+  // Container - Responsive padding
   container: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
   
-  // Header
-  headerContainer: "text-center max-w-3xl mx-auto mb-20",
-  badge: "inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6",
-  badgeDot: "w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse",
-  badgeText: "text-sm font-medium text-blue-700",
-  title: "text-2xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-gray-900 tracking-tight",
+  // Header - Responsive spacing and typography
+  headerContainer: "text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20",
+  badge: "inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-50 border border-blue-100 mb-4 sm:mb-6 text-xs sm:text-sm",
+  badgeDot: "w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full mr-2 animate-pulse flex-shrink-0",
+  badgeText: "text-xs sm:text-sm font-medium text-blue-700",
+  title: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight px-2 sm:px-0",
   titleGradient: "bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent",
-  subtitle: "mt-6 text-md md:text-xl lg:text-xl xl:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto",
+  subtitle: "mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto px-2 sm:px-0",
   
-  // Features Grid
-  featuresGrid: "mt-16 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 relative",
+  // Features Grid - Mobile-first responsive columns
+  featuresGrid: "mt-10 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative",
   
-  // Feature Card
-  featureCard: "group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-sm hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2 overflow-hidden",
+  // Feature Card - Responsive sizing
+  featureCard: "group relative bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-white/60 shadow-sm hover:shadow-lg sm:hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-1 sm:hover:-translate-y-2 overflow-hidden touch-manipulation active:scale-95",
   featureCardGradient: "absolute inset-0 bg-gradient-to-br from-blue-50/50 to-emerald-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500",
-  featureCardBorder: "absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-emerald-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500",
-  featureCardContent: "relative flex items-start gap-6",
-  featureCardIconContainer: "flex-shrink-0 w-10 h-10 lg:w-8 lg:h-8 xl:w-10 xl:h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-emerald-500 text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300",
-  featureCardTextContainer: "flex-1",
-  featureCardTitle: "text-sm whitespace-nowrap md:text-lg lg:text-sm xl:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300",
-  featureCardDescription: "mt-3 text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300",
-  featureCardCta: "mt-4 flex items-center text-blue-500 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300",
-  featureCardCtaText: "text-sm font-medium",
-  featureCardCtaIcon: "w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300",
+  featureCardBorder: "absolute inset-0 rounded-lg sm:rounded-2xl bg-gradient-to-r from-blue-500 to-emerald-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500",
+  featureCardContent: "relative flex items-start gap-4 sm:gap-6",
+  featureCardIconContainer: "flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 to-emerald-500 text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 text-lg sm:text-xl",
+  featureCardTextContainer: "flex-1 min-w-0",
+  featureCardTitle: "text-sm sm:text-base lg:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 break-words",
+  featureCardDescription: "mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300",
+  featureCardCta: "mt-3 sm:mt-4 flex items-center text-blue-500 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300",
+  featureCardCtaText: "text-xs sm:text-sm font-medium",
+  featureCardCtaIcon: "w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300",
   
-  // Bottom CTA
-  bottomCtaContainer: "mt-16 text-center",
-  bottomCtaButton: "group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300",
+  // Bottom CTA - Responsive
+  bottomCtaContainer: "mt-12 sm:mt-14 lg:mt-16 text-center px-4 sm:px-0",
+  bottomCtaButton: "group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold text-sm sm:text-base rounded-lg sm:rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:scale-95 transition-all duration-300",
   bottomCtaButtonText: "Explore All Features",
-  bottomCtaButtonIcon: "w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+  bottomCtaButtonIcon: "w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
 };
 
 // src/assets/dummyStyles.js (add these to the existing export)
 export const heroStyles = {
-  // Section
-  section: "relative min-h-screen pb-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20",
+  // Section - Mobile first responsive padding
+  section: "relative min-h-screen pb-8 sm:pb-16 pt-20 sm:pt-24 lg:pt-32 flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20",
   
-  // Background Elements
-  bgElement1: "absolute top-1/4 -left-10 w-72 h-72 rounded-full blur-3xl opacity-60 bg-gradient-to-r from-blue-200/40 to-cyan-300/40 animate-float-slow",
-  bgElement2: "absolute bottom-1/4 -right-10 w-96 h-96 rounded-full blur-3xl opacity-50 bg-gradient-to-r from-violet-200/30 to-fuchsia-300/30 animate-float-medium",
-  bgElement3: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 bg-gradient-to-r from-emerald-200/20 to-teal-300/20 animate-pulse-slow",
+  // Background Elements - Scaled for mobile
+  bgElement1: "absolute top-1/4 -left-10 w-40 sm:w-72 h-40 sm:h-72 rounded-full blur-3xl opacity-60 bg-gradient-to-r from-blue-200/40 to-cyan-300/40 animate-float-slow",
+  bgElement2: "absolute bottom-1/4 -right-10 w-48 sm:w-96 h-48 sm:h-96 rounded-full blur-3xl opacity-50 bg-gradient-to-r from-violet-200/30 to-fuchsia-300/30 animate-float-medium",
+  bgElement3: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-[500px] h-72 sm:h-[500px] rounded-full blur-3xl opacity-20 bg-gradient-to-r from-emerald-200/20 to-teal-300/20 animate-pulse-slow",
   
-  // Grid Pattern
-  gridPattern: "absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]",
+  // Grid Pattern - Responsive scale
+  gridPattern: "absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] bg-[size:40px_40px] sm:bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]",
   
-  // Container
-  container: "relative max-w-7xl mx-auto px-6 py-24 lg:py-32",
-  grid: "grid lg:grid-cols-2 gap-16 lg:gap-24 items-center",
+  // Container - Responsive padding
+  container: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24",
+  grid: "grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center",
   
-  // Content Column
-  content: "space-y-8 lg:space-y-10",
-  contentInner: "space-y-6",
+  // Content Column - Responsive spacing
+  content: "space-y-6 sm:space-y-8 lg:space-y-10 order-2 lg:order-1",
+  contentInner: "space-y-4 sm:space-y-6",
   
-  // Badge
-  badge: "inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-sm",
-  badgeDot: "w-2 h-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-500 animate-pulse",
-  badgeText: "text-sm font-medium text-gray-700",
+  // Badge - Responsive sizing
+  badge: "inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg sm:rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-200/60 shadow-sm text-xs sm:text-sm",
+  badgeDot: "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-500 animate-pulse",
+  badgeText: "text-xs sm:text-sm font-medium text-gray-700",
   
-  // Heading
-  heading: "text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight",
+  // Heading - Mobile-first responsive typography
+  heading: "text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight",
   headingLine1: "bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent",
   headingLine2: "bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent",
   headingLine3: "text-gray-600",
   
-  // Description
-  description: "text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-2xl",
+  // Description - Responsive font sizing
+  description: "text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-600 leading-relaxed max-w-2xl",
   descriptionHighlight: "font-semibold text-gray-700",
   
-  // CTA Buttons
-  ctaContainer: "flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6",
-  primaryButton: "group relative inline-flex items-center justify-center gap-3 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
+  // CTA Buttons - Mobile-first responsive layout
+  ctaContainer: "flex flex-col xs:flex-row xs:items-center gap-3 sm:gap-4 lg:gap-6 pt-2",
+  primaryButton: "group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-lg sm:rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm sm:text-base shadow-lg sm:shadow-2xl hover:shadow-xl sm:hover:shadow-3xl transform hover:scale-105 active:scale-95 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden w-full xs:w-auto",
   primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-  primaryButtonText: "relative",
-  primaryButtonIcon: "w-5 h-5 relative group-hover:translate-x-1 transition-transform duration-300",
-  secondaryButton: "group inline-flex items-center justify-center gap-2 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-200/60 text-gray-700 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:border-gray-300/60",
-  secondaryButtonIcon: "w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300",
+  primaryButtonText: "relative text-xs sm:text-sm",
+  primaryButtonIcon: "w-4 sm:w-5 h-4 sm:h-5 relative group-hover:translate-x-1 transition-transform duration-300",
+  secondaryButton: "group inline-flex items-center justify-center gap-2 px-5 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-lg sm:rounded-2xl bg-white/80 backdrop-blur-xl border border-gray-200/60 text-gray-700 font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 hover:border-gray-300/60 w-full xs:w-auto",
+  secondaryButtonIcon: "w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-y-0.5 transition-transform duration-300",
   
-  // Feature Highlights
-  featuresGrid: "grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8",
-  featureItem: "flex items-center gap-3 group",
-  featureIcon: "w-12 h-12 rounded-xl bg-white/80 backdrop-blur-xl border border-gray-200/60 flex items-center justify-center text-xl shadow-lg group-hover:scale-110 transition-transform duration-300",
+  // Feature Highlights - Responsive grid
+  featuresGrid: "grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 sm:pt-6 lg:pt-8",
+  featureItem: "flex items-start xs:items-center gap-2 sm:gap-3 group",
+  featureIcon: "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg sm:rounded-xl bg-white/80 backdrop-blur-xl border border-gray-200/60 flex items-center justify-center text-sm sm:text-lg shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0",
   featureText: "",
-  featureLabel: "font-semibold text-gray-900",
-  featureDesc: "text-sm text-gray-600",
+  featureLabel: "font-semibold text-gray-900 text-xs sm:text-sm",
+  featureDesc: "text-xs sm:text-sm text-gray-600 leading-snug",
   
-   demoColumn: "relative w-full",
+   demoColumn: "relative w-full order-1 lg:order-2",
   demoFloating1:
-    "hidden sm:block absolute -top-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 blur-xl opacity-60 animate-float-slow pointer-events-none",
+    "hidden sm:block absolute -top-6 -left-6 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 blur-xl opacity-60 animate-float-slow pointer-events-none",
   demoFloating2:
-    "hidden sm:block absolute -bottom-8 -right-8 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-2xl bg-gradient-to-br from-violet-100 to-purple-100 blur-xl opacity-40 animate-float-medium pointer-events-none",
+    "hidden sm:block absolute -bottom-8 -right-8 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-2xl bg-gradient-to-br from-violet-100 to-purple-100 blur-xl opacity-40 animate-float-medium pointer-events-none",
   demoContainer: "relative group w-full",
 
-  // Main Demo Card
+  // Main Demo Card - Responsive sizing and padding
   demoCard:
-    "bg-white/90 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl border border-gray-200/60 p-4 sm:p-6 md:p-8 transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-3xl w-full",
+    "bg-white/90 backdrop-blur-xl rounded-lg sm:rounded-2xl lg:rounded-3xl shadow-md sm:shadow-lg lg:shadow-2xl border border-gray-200/60 p-3 sm:p-5 md:p-6 lg:p-8 transform transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-3xl w-full",
   cardHeader:
-    "flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 sm:pb-6 border-b border-gray-200/60 gap-3",
-  cardLogoContainer: "flex items-center gap-2 sm:gap-3",
+    "flex flex-col xs:flex-row items-start xs:items-center justify-between pb-3 sm:pb-4 lg:pb-6 border-b border-gray-200/60 gap-2 xs:gap-3",
+  cardLogoContainer: "flex items-center gap-1.5 sm:gap-2 lg:gap-3",
   cardLogo:
-    "w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xs sm:text-sm",
-  cardClient: "flex flex-col",
-  cardClientName: "font-bold text-gray-900 text-base sm:text-lg",
-  cardClientGst: "text-xs sm:text-sm text-gray-500",
-  cardInvoiceInfo: "text-right mt-3 sm:mt-0",
+    "w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xs",
+  cardClient: "flex flex-col flex-1",
+  cardClientName: "font-bold text-gray-900 text-sm sm:text-base lg:text-lg",
+  cardClientGst: "text-xs text-gray-500",
+  cardInvoiceInfo: "xs:text-right mt-2 xs:mt-0",
   cardInvoiceLabel: "text-xs font-semibold text-gray-500 uppercase tracking-wider",
-  cardInvoiceNumber: "font-bold text-gray-900 text-base sm:text-lg",
+  cardInvoiceNumber: "font-bold text-gray-900 text-sm sm:text-base lg:text-lg",
   cardStatus:
-    "text-xs sm:text-sm text-emerald-600 font-medium bg-emerald-50 px-2 py-1 rounded-full mt-1",
+    "text-xs text-emerald-600 font-medium bg-emerald-50 px-2 py-1 rounded-full mt-1",
 
-  // Invoice Items
-  itemsContainer: "py-6 space-y-4",
+  // Invoice Items - Responsive text sizing
+  itemsContainer: "py-3 sm:py-4 lg:py-6 space-y-2 sm:space-y-3 lg:space-y-4",
   itemRow:
-    "flex justify-between items-center group/item hover:bg-gray-50/50 p-2 sm:p-3 rounded-lg transition-colors duration-200",
+    "flex justify-between items-center group/item hover:bg-gray-50/50 p-1.5 sm:p-2 lg:p-3 rounded-lg transition-colors duration-200",
   itemDot:
-    "w-2 h-2 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 group-hover/item:scale-150 transition-transform duration-300",
-  itemDescription: "text-gray-700 font-medium text-sm sm:text-base",
-  itemAmount: "font-semibold text-gray-900 text-sm sm:text-base",
+    "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 group-hover/item:scale-150 transition-transform duration-300 flex-shrink-0",
+  itemDescription: "text-gray-700 font-medium text-xs sm:text-sm lg:text-base flex-1 ml-2",
+  itemAmount: "font-semibold text-gray-900 text-xs sm:text-sm lg:text-base",
 
-  // Calculation Breakdown
-  calculationContainer: "space-y-3 pt-4 border-t border-gray-200/60",
-  calculationRow: "flex justify-between text-sm sm:text-base",
-  calculationLabel: "text-gray-600 text-sm sm:text-base",
-  calculationValue: "font-medium text-gray-900 text-sm sm:text-base",
+  // Calculation Breakdown - Responsive spacing
+  calculationContainer: "space-y-2 sm:space-y-3 pt-3 sm:pt-4 border-t border-gray-200/60",
+  calculationRow: "flex justify-between text-xs sm:text-sm lg:text-base",
+  calculationLabel: "text-gray-600 text-xs sm:text-sm lg:text-base",
+  calculationValue: "font-medium text-gray-900 text-xs sm:text-sm lg:text-base",
   totalRow:
-    "flex justify-between text-lg sm:text-xl font-bold pt-3 border-t border-gray-200/60",
+    "flex justify-between text-base sm:text-lg lg:text-xl font-bold pt-2 sm:pt-3 border-t border-gray-200/60",
   totalLabel: "text-gray-900",
   totalValue:
-    "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent text-lg sm:text-xl font-bold",
+    "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold",
 
-  // Action Buttons
-  actionButtons: "flex flex-col sm:flex-row gap-3 pt-6",
+  // Action Buttons - Responsive layout
+  actionButtons: "flex flex-col xs:flex-row gap-2 sm:gap-3 pt-4 sm:pt-5 lg:pt-6",
   previewButton:
-    "flex-1 px-4 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 group/btn text-sm sm:text-base",
+    "flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 hover:border-gray-400 active:bg-gray-100 transition-all duration-200 group/btn text-xs sm:text-sm",
   previewButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
   sendButton:
-    "flex-1 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 group/btn text-sm sm:text-base",
+    "flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-200 group/btn text-xs sm:text-sm",
   sendButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
 
-  // AI Indicator
+  // AI Indicator - Responsive positioning and sizing
   aiIndicator:
-    "absolute -bottom-6 left-1/2 -translate-x-1/2 xl:translate-y-8 lg:translate-y-8 md:translate-y-3 translate-y-13 bg-white/90 backdrop-blur-xl rounded-2xl px-4 py-2 sm:px-4 sm:py-3 shadow-lg border border-gray-200/60 text-sm sm:text-base",
-  aiIndicatorContent: "flex items-center gap-2 text-sm sm:text-base text-gray-600",
-  aiIndicatorDot: "w-2 h-2 rounded-full bg-emerald-400 animate-pulse",
-  aiIndicatorText: "font-medium text-gray-900 text-sm sm:text-base",
+    "absolute -bottom-3 sm:-bottom-4 lg:-bottom-6 left-1/2 -translate-x-1/2 xl:translate-y-8 lg:translate-y-6 md:translate-y-4 translate-y-10 bg-white/90 backdrop-blur-xl rounded-lg sm:rounded-2xl px-3 sm:px-4 py-1.5 sm:py-2 lg:py-3 shadow-md sm:shadow-lg border border-gray-200/60 text-xs sm:text-sm",
+  aiIndicatorContent: "flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600",
+  aiIndicatorDot: "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0",
+  aiIndicatorText: "font-medium text-gray-900 text-xs sm:text-sm",
 
-  // Decorative Accents
+  // Decorative Accents - Responsive sizing
   cornerAccent1:
-    "hidden sm:block absolute -top-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 border-t-2 border-r-2 border-blue-500 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+    "hidden sm:block absolute -top-2 -right-2 w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 border-t-2 border-r-2 border-blue-500 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500",
   cornerAccent2:
-    "hidden sm:block absolute -bottom-2 -left-2 w-5 h-5 sm:w-6 sm:h-6 border-b-2 border-l-2 border-indigo-500 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+    "hidden sm:block absolute -bottom-2 -left-2 w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 border-b-2 border-l-2 border-indigo-500 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500",
 
   // Card Background
   cardBackground:
-    "absolute inset-0 -z-10 bg-gradient-to-br from-blue-50/30 to-indigo-100/20 rounded-2xl sm:rounded-3xl blur-xl transform scale-100 sm:scale-105",
+    "absolute inset-0 -z-10 bg-gradient-to-br from-blue-50/30 to-indigo-100/20 rounded-lg sm:rounded-2xl lg:rounded-3xl blur-xl transform scale-100 sm:scale-105",
 
-  // Scroll Indicator
-  scrollIndicator: "absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 translate-y-18 sm:translate-y-20",
-  scrollContainer: "flex flex-col items-center pt-10 gap-2 text-gray-400",
-  scrollText: "text-sm font-medium",
+  // Scroll Indicator - Responsive positioning
+  scrollIndicator: "absolute bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 translate-y-16 sm:translate-y-18 lg:translate-y-20",
+  scrollContainer: "flex flex-col items-center pt-8 sm:pt-10 gap-2 text-gray-400",
+  scrollText: "text-xs sm:text-sm font-medium",
   scrollBar: "w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-300 rounded-full flex justify-center",
   scrollDot: "w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"
 };
@@ -853,96 +853,96 @@ export const invoicePreviewStyles = {
 };
 // src/assets/dummyStyles.js (add these to the existing export)
 export const pricingStyles = {
-  // Section
-  section: "relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden",
+  // Section - Responsive padding
+  section: "relative py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden",
   
-  // Background Elements
-  bgElement1: "absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob",
-  bgElement2: "absolute top-0 right-0 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000",
-  bgElement3: "absolute -bottom-8 left-20 w-72 h-72 bg-violet-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000",
+  // Background Elements - Responsive sizing
+  bgElement1: "absolute top-0 left-0 w-40 sm:w-72 h-40 sm:h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob",
+  bgElement2: "absolute top-0 right-0 w-40 sm:w-72 h-40 sm:h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000",
+  bgElement3: "absolute -bottom-8 left-20 w-40 sm:w-72 h-40 sm:h-72 bg-violet-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000",
   
-  // Container
+  // Container - Responsive padding
   container: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
   
-  // Header Section
-  headerContainer: "text-center max-w-3xl mx-auto mb-16",
-  badge: "inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6",
-  badgeDot: "w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse",
-  badgeText: "text-sm font-medium text-blue-700",
-  title: "text-2xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-gray-900 tracking-tight mb-6",
+  // Header Section - Responsive typography
+  headerContainer: "text-center max-w-3xl mx-auto mb-10 sm:mb-14 lg:mb-16",
+  badge: "inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-50 border border-blue-100 mb-4 sm:mb-6 text-xs sm:text-sm",
+  badgeDot: "w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-500 rounded-full mr-2 animate-pulse flex-shrink-0",
+  badgeText: "text-xs sm:text-sm font-medium text-blue-700",
+  title: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4 sm:mb-6 px-2 sm:px-0",
   titleGradient: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
-  description: "text-md md:text-xl lg:text-xl xl:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8",
+  description: "text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0",
   
-  // Billing Toggle
-  billingToggle: "inline-flex items-center bg-white/80 backdrop-blur-sm rounded-2xl p-2 border border-gray-200/60 shadow-sm",
-  billingButton: "px-6 py-3 rounded-xl font-semibold transition-all duration-300",
+  // Billing Toggle - Responsive
+  billingToggle: "inline-flex items-center flex-col xs:flex-row gap-2 xs:gap-0 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-2xl p-2 border border-gray-200/60 shadow-sm",
+  billingButton: "px-3 xs:px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 w-full xs:w-auto",
   billingButtonActive: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg",
   billingButtonInactive: "text-gray-600 hover:text-gray-900",
-  billingBadge: "ml-2 text-sm line-clamp-2 md:line-clamp-0 lg:line-clamp-0 xl:line-clamp-0 bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full",
+  billingBadge: "ml-0 xs:ml-2 text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full whitespace-nowrap",
   
-  // Pricing Grid
-  grid: "grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10 lg:gap-6 relative",
+  // Pricing Grid - Mobile-first responsive
+  grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-6 relative mt-10 sm:mt-12 lg:mt-14",
   
-  // Additional Info
-  additionalInfo: "mt-16 text-center",
-  featuresCard: "bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/60 shadow-sm max-w-2xl mx-auto",
-  featuresTitle: "text-2xl font-bold text-gray-900 mb-4",
-  featuresGrid: "grid sm:grid-cols-2 gap-4 text-gray-600",
-  featureItem: "flex items-center gap-3",
-  featureDot: "w-2 h-2 rounded-full bg-blue-500",
+  // Additional Info - Responsive
+  additionalInfo: "mt-10 sm:mt-14 lg:mt-16 text-center px-4 sm:px-0",
+  featuresCard: "bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-200/60 shadow-sm max-w-2xl mx-auto",
+  featuresTitle: "text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4",
+  featuresGrid: "grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm text-gray-600",
+  featureItem: "flex items-start xs:items-center gap-2 xs:gap-3",
+  featureDot: "w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0 mt-1.5 xs:mt-0",
   
-  // FAQ CTA
-  faqCta: "mt-12 text-center",
-  faqText: "text-gray-600 mb-6",
-  contactLink: "text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
+  // FAQ CTA - Responsive
+  faqCta: "mt-10 sm:mt-12 text-center",
+  faqText: "text-sm sm:text-base text-gray-600 mb-4 sm:mb-6",
+  contactLink: "text-blue-600 font-semibold hover:text-blue-700 text-xs sm:text-sm transition-colors duration-300"
 };
 
 export const pricingCardStyles = {
-  // Card Container
-  card: "group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 ease-out hover:-translate-y-2 overflow-hidden",
-  cardPopular: "border-blue-300/60 border-4 shadow-2xl scale-105 overflow-visible z-10",
-  cardRegular: "border-white/60 border-4 shadow-sm hover:shadow-2xl overflow-hidden",
+  // Card Container - Responsive and touch-friendly
+  card: "group relative bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-2xl lg:rounded-3xl p-5 sm:p-6 lg:p-8 border transition-all duration-500 ease-out hover:-translate-y-1 sm:hover:-translate-y-2 overflow-hidden touch-manipulation active:scale-95",
+  cardPopular: "border-2 sm:border-3 lg:border-4 border-blue-300/60 shadow-lg sm:shadow-2xl lg:scale-105 overflow-visible z-10",
+  cardRegular: "border-2 sm:border-3 lg:border-4 border-white/60 shadow-sm hover:shadow-lg sm:hover:shadow-2xl",
   
-  // Popular Badge
-  popularBadge: "absolute -top-4 left-1/2 -translate-x-1/2 z-40",
-  popularBadgeContent: "bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg",
+  // Popular Badge - Responsive positioning
+  popularBadge: "absolute -top-2 sm:-top-3 lg:-top-4 left-1/2 -translate-x-1/2 z-40",
+  popularBadgeContent: "bg-gradient-to-r from-amber-500 to-orange-600 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-lg",
   
   // Gradient Overlay
-  gradientOverlay: "absolute inset-0 bg-gradient-to-br from-blue-50/30 to-indigo-50/20 opacity-60 z-0 pointer-events-none rounded-3xl",
+  gradientOverlay: "absolute inset-0 bg-gradient-to-br from-blue-50/30 to-indigo-50/20 opacity-60 z-0 pointer-events-none rounded-lg sm:rounded-2xl lg:rounded-3xl",
   
   // Animated Border
-  animatedBorder: "absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500 z-10",
+  animatedBorder: "absolute inset-0 rounded-lg sm:rounded-2xl lg:rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-5 transition-opacity duration-500 z-10",
   
   // Content
   content: "relative z-20",
   
-  // Header
-  header: "text-center mb-8",
-  title: "text-2xl font-bold",
+  // Header - Responsive typography
+  header: "text-center mb-6 sm:mb-8",
+  title: "text-lg sm:text-xl lg:text-2xl font-bold",
   titlePopular: "text-gray-900",
   titleRegular: "text-gray-800",
-  description: "text-gray-600 mt-2",
+  description: "text-xs sm:text-sm text-gray-600 mt-2",
   
-  // Price
-  priceContainer: "text-center mb-8",
+  // Price - Responsive sizing
+  priceContainer: "text-center mb-6 sm:mb-8",
   priceWrapper: "flex items-baseline justify-center gap-1",
-  price: "text-4xl lg:text-5xl font-bold",
+  price: "text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold",
   pricePopular: "bg-gradient-to-r from-rose-600 to-indigo-600 bg-clip-text text-transparent",
   priceRegular: "text-gray-900",
-  period: "text-gray-500 text-lg",
-  annualBadge: "text-sm text-emerald-600 font-medium bg-emerald-50 px-3 py-1 rounded-full mt-2 inline-block",
+  period: "text-gray-500 text-xs sm:text-sm lg:text-lg",
+  annualBadge: "text-xs sm:text-sm text-emerald-600 font-medium bg-emerald-50 px-2 sm:px-3 py-1 rounded-full mt-2 inline-block",
   
-  // Features
-  featuresList: "space-y-4 mb-8",
-  featureItem: "flex items-center gap-3 text-gray-600",
-  featureIcon: "w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0",
+  // Features - Responsive spacing
+  featuresList: "space-y-3 sm:space-y-4 mb-6 sm:mb-8",
+  featureItem: "flex items-start sm:items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600",
+  featureIcon: "w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs",
   featureIconPopular: "bg-blue-100 text-blue-600",
   featureIconRegular: "bg-gray-100 text-gray-500",
-  featureText: "text-sm lg:text-base",
+  featureText: "text-xs sm:text-sm lg:text-base",
   
-  // CTA Button
-  ctaButton: "w-full py-4 px-6 rounded-3xl font-semibold transition-all cursor-pointer duration-300 group/btn",
-  ctaButtonPopular: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transform ",
+  // CTA Button - Responsive
+  ctaButton: "w-full py-2.5 sm:py-3 lg:py-4 px-4 sm:px-6 rounded-lg sm:rounded-xl lg:rounded-3xl font-semibold text-xs sm:text-sm lg:text-base transition-all cursor-pointer duration-300 group/btn touch-manipulation active:scale-95",
+  ctaButtonPopular: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transform",
   ctaButtonRegular: "bg-white border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50",
   ctaButtonText: "inline-block transition-transform duration-300",
   ctaButtonTextPopular: "group-hover/btn:translate-x-1",
@@ -991,50 +991,50 @@ export const authStyles = {
 
 // src/assets/dummyStyles.js (add these to the existing export)
 export const navbarStyles = {
-  // Header
-  header: "fixed w-full z-30 bg-white/80 backdrop-blur-sm border-b border-gray-100",
-  container: "max-w-7xl mx-auto px-6",
-  nav: "flex items-center justify-between h-16",
+  // Header - Fixed with proper z-index
+  header: "fixed w-full z-40 bg-white/95 backdrop-blur-md border-b border-gray-100",
+  container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+  nav: "flex items-center justify-between h-16 sm:h-20",
   
-  // Logo Section
-  logoSection: "flex items-center gap-4",
-  logoLink: "inline-flex items-center",
-  logoImage: "h-12 w-12 object-contain",
-  logoText: "font-semibold text-lg tracking-tight",
+  // Logo Section - Responsive sizing
+  logoSection: "flex items-center gap-2 sm:gap-4 flex-1 min-w-0",
+  logoLink: "inline-flex items-center gap-2 sm:gap-3 flex-shrink-0",
+  logoImage: "h-10 sm:h-12 w-10 sm:w-12 object-contain",
+  logoText: "font-semibold text-base sm:text-lg tracking-tight hidden xs:inline-block",
   
-  // Desktop Navigation
-  desktopNav: "hidden md:flex items-center space-x-6 ml-6",
-  navLink: "text-sm hover:text-indigo-600 transition",
-  navLinkInactive: "text-gray-600 hover:text-indigo-600 transition",
+  // Desktop Navigation - Hide on mobile, show on md+
+  desktopNav: "hidden md:flex items-center gap-4 lg:gap-8 ml-4 lg:ml-8",
+  navLink: "text-sm lg:text-base hover:text-indigo-600 transition-colors whitespace-nowrap",
+  navLinkInactive: "text-gray-600 text-sm lg:text-base hover:text-indigo-600 transition-colors whitespace-nowrap",
   
-  // Desktop Auth Buttons
-  authSection: "hidden md:flex items-center gap-4",
-  signInButton: "text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 px-4 py-2 rounded-2xl hover:bg-gray-50/80 backdrop-blur-sm",
-  signUpButton: "group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
+  // Desktop Auth Buttons - Hide on mobile
+  authSection: "hidden md:flex items-center gap-2 lg:gap-4",
+  signInButton: "text-xs sm:text-sm lg:text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 px-3 lg:px-4 py-2 rounded-lg lg:rounded-2xl hover:bg-gray-50/80 backdrop-blur-sm active:scale-95",
+  signUpButton: "group relative inline-flex items-center justify-center gap-2 px-4 lg:px-6 py-2 lg:py-3 rounded-lg lg:rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-xs sm:text-sm shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
   signUpOverlay: "absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
   signUpText: "relative",
   signUpIcon: "w-4 h-4 relative group-hover:translate-x-1 transition-transform duration-300",
   
-  // Mobile Menu Button
-  mobileMenuButton: "md:hidden p-3 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105",
-  mobileMenuIcon: "relative w-6 h-6",
-  mobileMenuLine1: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
+  // Mobile Menu Button - Show on small screens only
+  mobileMenuButton: "md:hidden p-2 sm:p-2.5 rounded-lg sm:rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 active:scale-95 flex-shrink-0 min-h-10 min-w-10",
+  mobileMenuIcon: "relative w-5 h-5 sm:w-6 sm:h-6",
+  mobileMenuLine1: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 sm:w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
   mobileMenuLine1Open: "rotate-45 translate-y-0",
   mobileMenuLine1Closed: "-translate-y-1",
-  mobileMenuLine2: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
+  mobileMenuLine2: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 sm:w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
   mobileMenuLine2Open: "opacity-0",
   mobileMenuLine2Closed: "opacity-100",
-  mobileMenuLine3: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
+  mobileMenuLine3: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 sm:w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300",
   mobileMenuLine3Open: "-rotate-45 translate-y-0",
   mobileMenuLine3Closed: "translate-y-1",
   
-  // Mobile Menu
-  mobileMenu: "md:hidden border-t border-gray-100 bg-white/95",
-  mobileMenuContainer: "px-6 py-4 space-y-3",
-  mobileNavLink: "block text-gray-700",
-  mobileAuthSection: "pt-2",
-  mobileSignIn: "block text-gray-700 py-2",
-  mobileSignUp: "block mt-2 px-4 py-2 rounded-md bg-indigo-600 text-white text-center"
+  // Mobile Menu - Proper mobile layout
+  mobileMenu: "md:hidden fixed top-16 sm:top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-5rem)] overflow-y-auto",
+  mobileMenuContainer: "px-4 sm:px-6 py-3 sm:py-4 space-y-2 sm:space-y-3",
+  mobileNavLink: "block text-gray-700 text-base sm:text-lg py-2.5 sm:py-3 px-3 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-colors font-medium",
+  mobileAuthSection: "pt-2 sm:pt-3 border-t border-gray-200 space-y-2 sm:space-y-3",
+  mobileSignIn: "block text-gray-700 text-base sm:text-lg py-2.5 sm:py-3 px-3 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-colors font-medium",
+  mobileSignUp: "block mt-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center font-semibold text-sm sm:text-base hover:from-blue-700 hover:to-indigo-700 active:scale-95 transition-all w-full"
 };
 
 // Add to src/assets/dummyStyles.js (after the existing styles)

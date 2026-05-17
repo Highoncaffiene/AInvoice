@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Invoice from "../models/invoiceModel.js";
 
 import { getAuth } from "@clerk/express";
-
+import { invoiceValidationSchema, validateData } from "../utils/validationSchemas.js";
 
 const API_BASE = 'http://localhost:4000/';
 
@@ -88,6 +88,11 @@ export async function createInvoice(req, res) {
         }
 
         const body = req.body || {};
+        
+        const validation = validateData(invoiceValidationSchema, body);
+        if (!validation.success) {
+            return res.status(400).json({ success: false, message: "Validation error", errors: validation.errors });
+        }
         const items = Array.isArray(body.items)
             ? body.items
             : parseItemsField(body.items);
@@ -256,21 +261,14 @@ export async function getInvoiceById(req, res) {
 
         const { id } = req.params;
         let inv;
-        if (isObjectIdString(id)) inv = await Invoice.findById(id);
-        else inv = await Invoice.findOne({ invoiceNumber: id });
+        if (isObjectIdString(id)) inv = await Invoice.findOne({ _id: id, owner: userId });
+        else inv = await Invoice.findOne({ invoiceNumber: id, owner: userId });
 
         if (!inv) {
             return res.status(404).json({
                 success: false,
                 message: "Invoice not found"
             });
-        }
-        if (inv.owner && String(inv.owner) !== String(userId)) {
-            return res.status(403).json({
-                success: false,
-                message: "forbidden: not your invoice"
-            });
-
         }
         return res.status(200).json({
             success: true,
@@ -299,6 +297,11 @@ export async function updateInvoice(req, res) {
         }
         const { id } = req.params;
         const body = req.body || {};
+        
+        const validation = validateData(invoiceValidationSchema, body);
+        if (!validation.success) {
+            return res.status(400).json({ success: false, message: "Validation error", errors: validation.errors });
+        }
 
         const query = isObjectIdString(id) ? { _id: id, owner: userId } : { invoiceNumber: id, owner: userId };
         const existing = await Invoice.findOne(query);
