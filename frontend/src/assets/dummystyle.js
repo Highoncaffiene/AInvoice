@@ -25,7 +25,7 @@ export const businessProfileStyles = {
   headerSubtitle: "mt-2 text-base sm:text-lg lg:text-xl text-gray-500 max-w-3xl",
   
   // Cards/Sections - Responsive padding
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg sm:rounded-lg p-4 sm:p-6 lg:p-8 border border-gray-200/60 shadow-sm",
+  cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg sm:rounded-lg p-4 sm:p-6 lg:p-8 border border-gray-200/60 shadow-sm card-lift",
   cardHeaderContainer: "flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6",
   cardIconContainer: "p-2 rounded-lg w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center",
   cardTitle: "text-lg sm:text-xl font-semibold text-gray-900",
@@ -130,7 +130,7 @@ export const createInvoiceStyles = {
   headerButtonContainer: "flex items-center gap-3",
   
   // Cards/Sections
-cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg p-4 sm:p-6 md:p-8 border border-gray-200/60 shadow-sm w-full",
+cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg p-4 sm:p-6 md:p-8 border border-gray-200/60 shadow-sm w-full card-lift",
 
 cardSmallContainer: "bg-white/80 backdrop-blur-xl rounded-lg p-3 sm:p-4 md:p-6 border border-gray-200/60 shadow-sm w-full",
 
@@ -392,8 +392,8 @@ export const dashboardStyles = {
   contentColumn: "xl:col-span-3",
   
   // Cards
-  cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm",
-  cardContainerOverflow: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm overflow-hidden",
+  cardContainer: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm card-lift",
+  cardContainerOverflow: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm overflow-hidden card-lift",
   
   // Quick Stats Card
   quickStatsCard: "bg-gradient-to-br from-accent to-accent rounded-lg p-6 text-white",
@@ -472,12 +472,12 @@ export const invoicesStyles = {
   
   // Stats Overview
   statsGrid: "grid grid-cols-2 md:grid-cols-4 gap-6",
-  statCard: "bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm",
+  statCard: "bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm card-lift",
   statValue: "text-2xl  text-gray-900",
   statLabel: "text-sm text-gray-500 mt-1",
   
   // Filters Section
-  filtersCard: "bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm",
+  filtersCard: "bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm card-lift",
   filtersHeader: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6",
   filtersHeaderLeft: "flex items-center gap-3",
   filtersIconContainer: "p-2 rounded-lg bg-gray-100 text-accent",
@@ -509,7 +509,7 @@ export const invoicesStyles = {
   resetButton: "inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-all duration-200 font-medium",
   
   // Table Section
-  tableCard: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm overflow-hidden",
+  tableCard: "bg-white/80 backdrop-blur-xl rounded-lg border border-gray-200/60 shadow-sm overflow-hidden card-lift",
   tableHeader: "px-6 py-5 border-b border-gray-200/60",
   tableHeaderContent: "flex items-center justify-between",
   tableTitle: "text-lg font-semibold text-gray-900",
@@ -899,9 +899,9 @@ export const pricingStyles = {
 
 export const pricingCardStyles = {
   // Card Container - Responsive and touch-friendly
-  card: "group relative bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-lg lg:rounded-lg p-5 sm:p-6 lg:p-8 border transition-all duration-500 ease-out hover:-translate-y-1 sm:hover:-translate-y-2 overflow-hidden touch-manipulation active:scale-95",
-  cardPopular: "border-2 sm:border-3 lg:border-4 border-gray-100/60 shadow-lg sm:shadow-2xl lg:scale-105 overflow-visible z-10",
-  cardRegular: "border-2 sm:border-3 lg:border-4 border-white/60 shadow-sm hover:shadow-lg sm:hover:shadow-2xl",
+  card: "group relative bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-lg lg:rounded-lg p-5 sm:p-6 lg:p-8 border transition-all duration-500 ease-out hover:-translate-y-1 sm:hover:-translate-y-2 overflow-hidden touch-manipulation active:scale-95 card-lift",
+  cardPopular: "border-2 sm:border-3 lg:border-4 border-gray-100/60 shadow-lg sm:shadow-2xl lg:scale-105 overflow-visible z-10 card-lift",
+  cardRegular: "border-2 sm:border-3 lg:border-4 border-white/60 shadow-sm hover:shadow-lg sm:hover:shadow-2xl card-lift",
   
   // Popular Badge - Responsive positioning
   popularBadge: "absolute -top-2 sm:-top-3 lg:-top-4 left-1/2 -translate-x-1/2 z-40",
@@ -959,7 +959,7 @@ export const authStyles = {
   // Layout
   pageContainer: "min-h-screen bg-white text-gray-800 antialiased",
   authContainer: "flex items-center justify-center py-24 px-6",
-  authCard: "w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-100 p-8",
+  authCard: "w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-100 p-8 card-lift",
   
   // Header
   authTitle: "text-2xl  mb-1",
@@ -1041,7 +1041,7 @@ export const navbarStyles = {
 
 export const kpiCardStyles = {
   // Card Container
-  cardContainer: "group relative bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] hover:border-gray-300/60 overflow-hidden",
+  cardContainer: "group relative bg-white/80 backdrop-blur-xl rounded-lg p-6 border border-gray-200/60 shadow-sm hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] hover:border-gray-300/60 overflow-hidden card-lift",
   
   // Background Effects
   animatedBackground: "absolute inset-0 bg-gradient-to-br from-gray-100/0 via-gray-100/0 to-gray-100/0 group-hover:from-gray-100/30 group-hover:via-gray-100/20 group-hover:to-gray-100/10 transition-all duration-500 ease-out",
@@ -1104,7 +1104,7 @@ export const loginStyles = {
   container: "flex items-center justify-center py-24 px-6",
   
   // Form Container
-  formContainer: "w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-100 p-8",
+  formContainer: "w-full max-w-md bg-white rounded-lg shadow-lg border border-gray-100 p-8 card-lift",
   title: "text-2xl  mb-1",
   subtitle: "text-sm text-gray-500 mb-6",
   
