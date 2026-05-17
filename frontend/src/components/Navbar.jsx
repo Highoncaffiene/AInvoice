@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   SignedOut,
@@ -13,6 +13,28 @@ const Navbar = () => {
   const { openSignIn } = useClerk();
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY <= 10) {
+        // Back on top of the page
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down
+        setVisible(false);
+      }
+      // If scrolling up but not at top, it stays hidden as per instructions
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // ❌ Hide navbar inside app
   if (location.pathname.startsWith("/app")) return null;
@@ -30,7 +52,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={navbarStyles.header}>
+    <header className={`${navbarStyles.header} transition-transform duration-300 ease-in-out ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className={navbarStyles.container}>
         <nav className={navbarStyles.nav}>
           {/* LEFT - Logo and Desktop Navigation */}
