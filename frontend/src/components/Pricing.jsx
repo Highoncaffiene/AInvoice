@@ -34,11 +34,11 @@ const PricingCard = ({
         <div className={pricingCardStyles.content}>
             <div className={pricingCardStyles.header}>
                 <h3 className={`${pricingCardStyles.title} 
-                ${isPopular ?
-                        pricingCardStyles.titlePopular :
-                        pricingCardStyles.titleRegular
-                    }`}
-                >{title}
+ ${isPopular ?
+ pricingCardStyles.titlePopular :
+ pricingCardStyles.titleRegular
+ }`}
+ >{title}
                 </h3 >
                 <p className={pricingCardStyles.description}>{description}</p>
 

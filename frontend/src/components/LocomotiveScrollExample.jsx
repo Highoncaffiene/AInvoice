@@ -34,13 +34,13 @@ const ScrollToElementExample = () => {
 
   return (
     <div>
-      <button onClick={handleScrollToSection} className="px-4 py-2 bg-blue-500 text-white rounded">
+      <button onClick={handleScrollToSection} className="px-4 py-2 bg-accent text-white rounded">
         Scroll to Section
       </button>
 
       {/* This is the target element */}
       <div id="target-section" className="mt-screen h-screen flex items-center justify-center bg-gray-100">
-        <h2 className="text-4xl font-bold">You scrolled here!</h2>
+        <h2 className="text-4xl ">You scrolled here!</h2>
       </div>
     </div>
   );
@@ -113,14 +113,14 @@ const DynamicContentExample = () => {
 
   return (
     <div ref={contentRef}>
-      <button onClick={handleAddItem} className="px-4 py-2 bg-green-500 text-white rounded mb-4">
+      <button onClick={handleAddItem} className="px-4 py-2 bg-accent text-white rounded mb-4">
         Add Item (Scroll will update)
       </button>
 
       <div className="space-y-4">
         {items.map((item, index) => (
-          <div key={index} className="h-40 bg-blue-200 flex items-center justify-center">
-            <h3 className="text-xl font-bold">{item}</h3>
+          <div key={index} className="h-40 bg-gray-100 flex items-center justify-center">
+            <h3 className="text-xl ">{item}</h3>
           </div>
         ))}
       </div>
@@ -162,8 +162,8 @@ const HeaderAutoHide = () => {
         headerVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <h1 className="text-2xl font-bold">My App</h1>
-      <p className="text-gray-600">Scroll down to hide, up to show</p>
+      <h1 className="text-2xl ">My App</h1>
+      <p className="text-gray-500">Scroll down to hide, up to show</p>
     </header>
   );
 };
@@ -192,12 +192,12 @@ const ParallaxExample = () => {
   return (
     <div
       ref={elementRef}
-      className="h-screen bg-gradient-to-b from-purple-400 to-purple-600 flex items-center justify-center overflow-hidden"
+      className="h-screen bg-gradient-to-b from-gray-100 to-accent flex items-center justify-center overflow-hidden"
       style={{
         transform: `translateY(${parallaxOffset}px)`,
       }}
     >
-      <h2 className="text-5xl font-bold text-white">Parallax Effect</h2>
+      <h2 className="text-5xl text-white">Parallax Effect</h2>
     </div>
   );
 };
@@ -231,8 +231,8 @@ const ScrollTriggerExample = () => {
   return (
     <div ref={elementRef} className={`h-64 flex items-center justify-center transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="text-center">
-        <h3 className="text-3xl font-bold">This appears when scrolled into view!</h3>
-        <p className="text-gray-600">Animation triggered by scroll position</p>
+        <h3 className="text-3xl ">This appears when scrolled into view!</h3>
+        <p className="text-gray-500">Animation triggered by scroll position</p>
       </div>
     </div>
   );
@@ -262,7 +262,7 @@ const ScrollProgressBar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
       <div
-        className="h-full bg-blue-500 transition-all duration-300"
+        className="h-full bg-accent transition-all duration-300"
         style={{ width: `${progress}%` }}
       />
     </div>
@@ -297,7 +297,7 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={handleScrollToTop}
-        className="fixed bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-colors z-50"
+        className="fixed bottom-6 right-6 bg-accent text-white p-3 rounded-full shadow-lg hover:bg-accent transition-colors z-50"
         title="Scroll to top"
       >
         ↑

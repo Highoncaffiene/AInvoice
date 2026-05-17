@@ -65,25 +65,25 @@ const StatusBadge = ({
 
     const statusConfig = {
     paid: {
-      bg: "bg-emerald-50/80 backdrop-blur-sm",
-      text: "text-emerald-700",
-      border: "border-emerald-200",
+      bg: "bg-gray-100/80 backdrop-blur-sm",
+      text: "text-accent",
+      border: "border-gray-100",
       icon: "paid",
-      gradient: "from-emerald-400 to-green-500",
+      gradient: "from-gray-100 to-accent",
     },
     unpaid: {
-      bg: "bg-amber-50/80 backdrop-blur-sm",
-      text: "text-amber-700",
-      border: "border-amber-200",
+      bg: "bg-gray-100/80 backdrop-blur-sm",
+      text: "text-accent",
+      border: "border-gray-100",
       icon: "unpaid",
-      gradient: "from-amber-400 to-orange-500",
+      gradient: "from-gray-100 to-accent",
     },
     overdue: {
-      bg: "bg-rose-50/80 backdrop-blur-sm",
-      text: "text-rose-700",
-      border: "border-rose-200",
+      bg: "bg-gray-100/80 backdrop-blur-sm",
+      text: "text-accent",
+      border: "border-gray-100",
       icon: "overdue",
-      gradient: "from-rose-400 to-red-500",
+      gradient: "from-gray-100 to-accent",
     },
     draft: {
       bg: "bg-gray-50/80 backdrop-blur-sm",

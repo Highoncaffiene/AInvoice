@@ -804,7 +804,7 @@ console.log("AI CLIENT OBJECT:", aiInvoice.client);
             </label>
             <div className={invoicesStyles.searchInputContainer}>
               <div className={invoicesStyles.searchIcon}>
-                <SearchIcon className="w-5 h-5 text-gray-400" />
+                <SearchIcon className="w-5 h-5 text-gray-500" />
               </div>
               <input
                 id="invoice-search"

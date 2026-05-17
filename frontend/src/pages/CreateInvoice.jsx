@@ -1430,7 +1430,7 @@ export default function CreateInvoice() {
                 </div>
 
                 <div className={createInvoiceStyles.taxRow}>
-                  <div className="text-sm text-gray-600">Tax Amount</div>
+                  <div className="text-sm text-gray-500">Tax Amount</div>
                   <div className="font-medium text-gray-900">
                     {currencyFmt(totals.tax, invoice.currency)}
                   </div>

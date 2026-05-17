@@ -375,7 +375,7 @@ const AppShell = () => {
                   </button>
                 )}
                 <div className={appShellStyles.welcomeContainer}>
-                  <h2  className={appShellStyles.welcomeTitle}>
+                  <h2 className={appShellStyles.welcomeTitle}>
                     Welcome back , {""}
                     <span className={appShellStyles.welcomeName}>
                       {firstName()}

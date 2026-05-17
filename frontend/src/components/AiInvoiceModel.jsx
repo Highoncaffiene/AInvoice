@@ -95,7 +95,7 @@ const AiInvoiceModel = ({ open, onClose, onGenerated, initialText = "" }) => {
             ))}
 
             {/quota|rate|busy|exhausted/i.test(error) && (
-              <div className="mt-2 text-sm text-gray-600">
+              <div className="mt-2 text-sm text-gray-500">
                 AI is busy. Please wait 1 minute and try again.
               </div>
             )}

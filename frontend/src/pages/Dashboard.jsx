@@ -365,15 +365,15 @@ const Dashboard = () => {
         <div className="p-6"> Loading Invoices....</div>
       ) : error ? (
         <div className="p-6">
-          <div className="text-red-600 mb-3">
+          <div className="text-accent mb-3">
             Error:{error}
           </div>
           <div className="flex gap-2">
-            <button onClick={fetchInvoices} className="px-3 py-1 bg-blue-600 text-white rounded">
+            <button onClick={fetchInvoices} className="px-3 py-1 bg-accent text-white rounded">
               Retry
             </button>
             {String(error).toLowerCase().includes("unauthorized") && (
-              <button onClick={() => navigate("/login")} className="px-3 py-1 bg-green-700 text-white rounded">
+              <button onClick={() => navigate("/login")} className="px-3 py-1 bg-accent text-white rounded">
                 Sign In
               </button>
             )}
@@ -444,7 +444,7 @@ const Dashboard = () => {
           {/* quick fix */}
           <div className={dashboardStyles.cardContainer}>
             <div className="p-6">
-              <h3 className="font-semibold text-gray-900 mb-4">
+              <h3 className=" text-gray-900 mb-4">
                 Quick Actions
               </h3>
               <div className={dashboardStyles.quickActionsContainer}>
